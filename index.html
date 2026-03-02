@@ -4,98 +4,222 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abraham Hernández | Ingeniero en Sistemas</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  font-family:'Poppins', sans-serif;
+}
+
 body{
-    margin:0;
-    font-family: 'Orbitron', sans-serif;
-    background:#0f172a;
-    color:white;
+  background:#0f172a;
+  color:white;
 }
-header{
-    text-align:center;
-    padding:50px 20px;
+
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:#020617;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
 }
-.profile-pic{
-    width:150px;
-    border-radius:50%;
-    border:3px solid #00f5d4;
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
 }
+
+nav a:hover{
+  color:#00f5d4;
+}
+
 section{
-    padding:40px 20px;
-    max-width:900px;
-    margin:auto;
+  padding:100px 20px;
+  max-width:1000px;
+  margin:auto;
 }
+
+.hero{
+  text-align:center;
+  padding-top:150px;
+}
+
+.hero img{
+  width:170px;
+  border-radius:50%;
+  border:4px solid #00f5d4;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:2.5rem;
+}
+
+.hero p{
+  margin:10px 0 20px 0;
+  color:#cbd5e1;
+}
+
+.btn{
+  padding:12px 25px;
+  background:#00f5d4;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+  border-radius:8px;
+  margin:5px;
+}
+
+.btn:hover{
+  background:#00d4b4;
+}
+
 h2{
-    color:#00f5d4;
+  color:#00f5d4;
+  margin-bottom:20px;
 }
+
 .skills span{
-    display:inline-block;
-    background:#1e293b;
-    padding:8px 15px;
-    margin:5px;
-    border-radius:20px;
+  display:inline-block;
+  background:#1e293b;
+  padding:10px 15px;
+  margin:8px;
+  border-radius:20px;
 }
-button{
-    padding:10px 20px;
-    background:#00f5d4;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
+
+.card{
+  background:#1e293b;
+  padding:20px;
+  border-radius:10px;
+  margin-top:20px;
 }
+
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
+  background:#1e293b;
+  color:white;
+}
+
+form button{
+  width:100%;
+  padding:12px;
+  background:#00f5d4;
+  border:none;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:#00d4b4;
+}
+
 footer{
-    text-align:center;
-    padding:20px;
-    background:#020617;
-}
-a{
-    color:#00f5d4;
+  text-align:center;
+  padding:30px;
+  background:#020617;
+  margin-top:50px;
+  color:#94a3b8;
 }
 </style>
 </head>
+
 <body>
 
-<header>
-<img src="profile.jpg" class="profile-pic" alt="Foto de perfil">
-<h1>Abraham Hernández González</h1>
-<p>Ingeniero en Sistemas | Maestría en Ciberseguridad</p>
-<a href="cv.pdf" download><button>Descargar CV</button></a>
-</header>
+<nav>
+  <h3 style="color:#00f5d4;">AHG</h3>
+  <div>
+    <a href="#about">Sobre mí</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experiencia</a>
+    <a href="#contact">Contacto</a>
+  </div>
+</nav>
 
-<section>
-<h2>Sobre mí</h2>
-<p>Profesional especializado en infraestructura TI, ciberseguridad, redes y análisis de vulnerabilidades. Experiencia en entornos empresariales y comerciales.</p>
+<section class="hero">
+  <img src="profile.jpg" alt="Foto de perfil">
+  <h1>Abraham Hernández González</h1>
+  <p>Ingeniero en Sistemas | Maestría en Ciberseguridad</p>
+  <a href="cv.pdf" download><button class="btn">Descargar CV</button></a>
+  <a href="#contact"><button class="btn">Contactarme</button></a>
 </section>
 
-<section>
-<h2>Skills Técnicas</h2>
-<div class="skills">
-<span>Cybersecurity</span>
-<span>Redes</span>
-<span>Linux</span>
-<span>Firewall</span>
-<span>Pentesting</span>
-<span>Python</span>
-<span>SQL</span>
-</div>
+<section id="about">
+  <h2>Perfil Profesional</h2>
+  <p>
+    Profesional especializado en infraestructura TI, ciberseguridad, análisis de vulnerabilidades,
+    administración de redes y gestión tecnológica empresarial.
+  </p>
 </section>
 
-<section>
-<h2>Experiencia</h2>
-<p><strong>SINSA</strong> - Asesor de Ventas Técnicas</p>
-<p>Gestión de clientes empresariales, inventarios y soluciones tecnológicas.</p>
+<section id="skills">
+  <h2>Skills Técnicas</h2>
+  <div class="skills">
+    <span>Ciberseguridad</span>
+    <span>Pentesting</span>
+    <span>Linux</span>
+    <span>Redes</span>
+    <span>Firewall</span>
+    <span>Python</span>
+    <span>SQL</span>
+    <span>Gestión TI</span>
+  </div>
 </section>
 
-<section>
-<h2>Contacto</h2>
-<p>Email: tuemail@gmail.com</p>
-<p>LinkedIn: <a href="#">Tu LinkedIn</a></p>
-<p>GitHub: <a href="#">Tu GitHub</a></p>
+<section id="experience">
+  <h2>Experiencia Profesional</h2>
+  <div class="card">
+    <h3>SINSA</h3>
+    <p>Asesor de ventas técnicas con enfoque en soluciones empresariales, inventarios y atención estratégica a clientes corporativos.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contacto</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Tu nombre" required>
+    <input type="email" id="email" placeholder="Tu correo electrónico" required>
+    <textarea id="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+    <button type="submit">Enviar mensaje por WhatsApp</button>
+  </form>
 </section>
 
 <footer>
-<p>© 2026 Abraham Hernández | Seguridad y Tecnología</p>
+  © 2026 Abraham Hernández | Seguridad y Tecnología
 </footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let phoneNumber = "50589871374";
+
+    let text = `Hola Abraham, mi nombre es ${name}%0AEmail: ${email}%0A%0AMensaje:%0A${message}`;
+
+    let url = `https://wa.me/${phoneNumber}?text=${text}`;
+
+    window.open(url, "_blank");
+});
+</script>
 
 </body>
 </html>
